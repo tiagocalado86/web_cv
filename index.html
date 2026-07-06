@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Tiago Calado — Software Engineer</title>
+		<meta
+			name="description"
+			content="Tiago Calado — Software Engineer. Back-end, web and data. Two industry internships including back-end development at IBM / Softinsa."
+		/>
+		<meta name="author" content="Tiago Calado" />
+
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Tiago Calado — Software Engineer" />
+		<meta
+			property="og:description"
+			content="Back-end · web · data. Building clean, maintainable services and data pipelines."
+		/>
+
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="style.css" />
+
+		<!-- Set theme before first paint to avoid a flash -->
+		<script>
+			(function () {
+				try {
+					var s = localStorage.getItem('tc-cv-theme');
+					var t =
+						s === 'light' || s === 'dark'
+							? s
+							: window.matchMedia('(prefers-color-scheme: dark)').matches
+							? 'dark'
+							: 'light';
+					document.documentElement.setAttribute('data-theme', t);
+				} catch (e) {}
+			})();
+		</script>
+	</head>
+	<body>
+		<span id="top"></span>
+		<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+		<!-- Top bar -->
+		<div class="topbar">
+			<a href="#top" class="topbar__brand">TC<span>.</span></a>
+			<div class="topbar__actions">
+				<button
+					id="theme-toggle"
+					class="btn btn--icon"
+					type="button"
+					aria-label="Toggle dark mode"
+					title="Toggle theme"
+				>
+					<svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+						<circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2" />
+						<path
+							d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+						/>
+					</svg>
+					<svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+						<path
+							d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linejoin="round"
+						/>
+					</svg>
+				</button>
+			</div>
+		</div>
+
+		<div class="wrap">
+			<!-- Hero -->
+			<header class="hero hero--intro">
+				<p class="hero__eyebrow"><span class="mono">// hello, I'm</span></p>
+				<h1 class="hero__name">Tiago Calado</h1>
+				<p class="hero__role"><span class="mono">Software Engineer</span></p>
+				<p class="hero__bio">
+					Software engineer with two industry internships, including back-end
+					development at <strong>IBM&nbsp;/&nbsp;Softinsa</strong>. I build clean,
+					maintainable services and data pipelines, and work comfortably across
+					languages and frameworks — from Python and SQL to the web stack. I like
+					turning ambiguous problems into reliable solutions and enjoy owning a
+					feature end to end, from data layer to interface.
+				</p>
+				<div class="hero__tags">
+					<span class="chip mono">// back-end</span>
+					<span class="chip mono">// web</span>
+					<span class="chip mono">// data</span>
+					<span class="chip chip--open mono">// open to roles</span>
+				</div>
+			</header>
+
+			<div class="layout">
+				<!-- Main column -->
+				<main class="main">
+					<!-- Experience -->
+					<section class="block reveal" id="experience">
+						<h2 class="block__title"><span class="block__num">01</span> Experience</h2>
+
+						<ol class="timeline">
+							<li class="timeline__item">
+								<div class="timeline__head">
+									<h3 class="timeline__role">Software Engineering Intern · Back-End</h3>
+									<span class="timeline__date mono">Feb 2024 — May 2024</span>
+								</div>
+								<p class="timeline__org">IBM — Softinsa</p>
+								<ul class="bullets">
+									<li>
+										Built a <strong>data-filtration service for SAP</strong> in Python
+										(Flask), exposing a clean API for downstream consumption.
+									</li>
+									<li>
+										Engineered <strong>CSV processing pipelines</strong> with Pandas to
+										transform and validate large enterprise datasets reliably.
+									</li>
+									<li>
+										Worked within an enterprise engineering team, following
+										<strong>collaborative development practices</strong> and code review.
+									</li>
+									<li>
+										Delivered a maintainable, production-oriented back-end in a
+										corporate environment.
+									</li>
+								</ul>
+							</li>
+
+							<li class="timeline__item">
+								<div class="timeline__head">
+									<h3 class="timeline__role">Web Development Intern · Back-End</h3>
+									<span class="timeline__date mono">Jun 2023 — Aug 2023</span>
+								</div>
+								<p class="timeline__org">Web Development Internship</p>
+								<ul class="bullets">
+									<li>
+										Designed and implemented <strong>back-end web services</strong>
+										end-to-end, owning architecture and tooling decisions.
+									</li>
+									<li>
+										Chose Flask for flexibility and built
+										<strong>scalable, maintainable</strong> service structure from scratch.
+									</li>
+									<li>
+										Applied <strong>creative problem-solving</strong> to overcome technical
+										blockers and ship working features independently.
+									</li>
+								</ul>
+							</li>
+						</ol>
+					</section>
+
+					<!-- Projects -->
+					<section class="block reveal" id="projects">
+						<h2 class="block__title"><span class="block__num">02</span> Selected Projects</h2>
+
+						<div class="projects">
+							<article class="project">
+								<div class="project__icon mono">&lt;/&gt;</div>
+								<div class="project__body">
+									<h3 class="project__title">Full Web Application</h3>
+									<p class="project__stack mono">Python · REST API · Front-End</p>
+									<p class="project__desc">
+										End-to-end application pairing a back-end REST API with a web
+										front-end — built to practice clean architecture and end-to-end
+										ownership.
+									</p>
+								</div>
+							</article>
+
+							<article class="project">
+								<div class="project__icon mono">&lt;/&gt;</div>
+								<div class="project__body">
+									<h3 class="project__title">API &amp; Data Services</h3>
+									<p class="project__stack mono">Python · Flask · FastAPI · Pandas</p>
+									<p class="project__desc">
+										Back-end services and data-processing prototypes exploring API
+										design, request handling, and dataset transformation.
+									</p>
+								</div>
+							</article>
+
+							<article class="project">
+								<div class="project__icon mono">&lt;/&gt;</div>
+								<div class="project__body">
+									<h3 class="project__title">Containerised Deployments</h3>
+									<p class="project__stack mono">Docker</p>
+									<p class="project__desc">
+										Packaging applications into reproducible Docker containers for
+										consistent local-to-deploy workflows.
+									</p>
+								</div>
+							</article>
+
+							<article class="project">
+								<div class="project__icon mono">&lt;/&gt;</div>
+								<div class="project__body">
+									<h3 class="project__title">Creative &amp; Media Tooling</h3>
+									<p class="project__stack mono">3D Modeling · Photoshop · Premiere</p>
+									<p class="project__desc">
+										Side work in 3D modeling and media editing — a visual eye that
+										carries into thoughtful, detail-driven UI.
+									</p>
+								</div>
+							</article>
+						</div>
+
+						<a class="more-link mono" href="https://github.com/tiagocalado86" target="_blank" rel="noopener">
+							More on GitHub → github.com/tiagocalado86
+						</a>
+					</section>
+				</main>
+
+				<!-- Sidebar -->
+				<aside class="sidebar">
+					<section class="card reveal" id="contact">
+						<h2 class="card__title">Contact</h2>
+						<ul class="contact">
+							<li>
+								<span class="contact__label mono">GitHub</span>
+								<a class="contact__value" href="https://github.com/tiagocalado86" target="_blank" rel="noopener">github.com/tiagocalado86</a>
+							</li>
+							<li>
+								<span class="contact__label mono">Location</span>
+								<span class="contact__value">Portugal</span>
+							</li>
+						</ul>
+					</section>
+
+					<section class="card reveal" id="stack">
+						<h2 class="card__title">Tech Stack</h2>
+
+						<div class="stack-group">
+							<h3 class="stack-group__title mono">Languages</h3>
+							<div class="pills">
+								<span class="pill pill--accent">Python</span>
+								<span class="pill pill--accent">Java</span>
+								<span class="pill pill--accent">JavaScript</span>
+								<span class="pill pill--accent">SQL</span>
+								<span class="pill pill--accent">PHP</span>
+							</div>
+						</div>
+
+						<div class="stack-group">
+							<h3 class="stack-group__title mono">Back-End &amp; Frameworks</h3>
+							<div class="pills">
+								<span class="pill">Flask</span>
+								<span class="pill">FastAPI</span>
+								<span class="pill">Django</span>
+								<span class="pill">Node.js</span>
+								<span class="pill">REST APIs</span>
+							</div>
+						</div>
+
+						<div class="stack-group">
+							<h3 class="stack-group__title mono">Web &amp; Front-End</h3>
+							<div class="pills">
+								<span class="pill">HTML</span>
+								<span class="pill">CSS</span>
+								<span class="pill">React</span>
+							</div>
+						</div>
+
+						<div class="stack-group">
+							<h3 class="stack-group__title mono">Data &amp; Tooling</h3>
+							<div class="pills">
+								<span class="pill">Pandas</span>
+								<span class="pill">Docker</span>
+								<span class="pill">Git</span>
+								<span class="pill">JetBrains IDEs</span>
+							</div>
+						</div>
+					</section>
+
+					<section class="card reveal" id="languages">
+						<h2 class="card__title">Languages</h2>
+						<ul class="langs">
+							<li>
+								<span>Portuguese</span>
+								<span class="langs__level mono">Native</span>
+							</li>
+							<li>
+								<span>English</span>
+								<span class="langs__level mono">Professional</span>
+							</li>
+						</ul>
+					</section>
+
+					<section class="card reveal" id="education">
+						<h2 class="card__title">Education</h2>
+						<ul class="edu">
+							<li>
+								<h3 class="edu__title">BSc Software Engineering</h3>
+								<p class="edu__org">IP de Castelo Branco</p>
+								<p class="edu__meta mono">In progress</p>
+							</li>
+							<li>
+								<h3 class="edu__title">CTeSP — Web &amp; Multimedia Dev</h3>
+								<p class="edu__org">IP de Castelo Branco</p>
+								<p class="edu__meta mono">Concluded 2024</p>
+							</li>
+							<li>
+								<h3 class="edu__title">Secondary · Sciences &amp; Tech</h3>
+								<p class="edu__org">Escola D. Maria II, V. N. da Barquinha</p>
+								<p class="edu__meta mono">Concluded 2022</p>
+							</li>
+						</ul>
+					</section>
+				</aside>
+			</div>
+
+			<footer class="footer">
+				<p class="mono">// open to software engineer roles · back-end · web · data</p>
+				<p class="footer__copy">&copy; <span id="year"></span> Tiago Calado</p>
+			</footer>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
