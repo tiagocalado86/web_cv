@@ -6,7 +6,7 @@
 		<title>Tiago Calado — Software Engineer</title>
 		<meta
 			name="description"
-			content="Tiago Calado — Software Engineer. Back-end, web and data. Two industry internships including back-end development at IBM / Softinsa."
+			content="Tiago Calado — Software Engineer. Back-end, web, data and LLM workflows. Two industry internships including back-end development at IBM / Softinsa."
 		/>
 		<meta name="author" content="Tiago Calado" />
 
@@ -15,7 +15,7 @@
 		<meta property="og:title" content="Tiago Calado — Software Engineer" />
 		<meta
 			property="og:description"
-			content="Back-end · web · data. Building clean, maintainable services and data pipelines."
+			content="Back-end · web · data · LLM workflows. Building clean, maintainable services with an agent-in-the-loop workflow."
 		/>
 
 		<!-- Fonts -->
@@ -91,14 +91,22 @@
 					Software engineer with two industry internships, including back-end
 					development at <strong>IBM&nbsp;/&nbsp;Softinsa</strong>. I build clean,
 					maintainable services and data pipelines, and work comfortably across
-					languages and frameworks — from Python and SQL to the web stack. I like
-					turning ambiguous problems into reliable solutions and enjoy owning a
-					feature end to end, from data layer to interface.
+					languages and frameworks — from Python and SQL to the web stack.
+					<strong>LLM-driven workflows are central to how I work</strong>: I use
+					<strong>Claude&nbsp;Code</strong> daily as an agentic development
+					environment — scoping specs, orchestrating multi-step refactors,
+					generating and reviewing tests, and wiring up custom tooling and MCP
+					servers so the model has real context on the codebase. I care about the
+					discipline as much as the speed: reviewable diffs, tight context, and
+					code I'd be happy to own. I like turning ambiguous problems into
+					reliable solutions and enjoy owning a feature end to end, from data
+					layer to interface.
 				</p>
 				<div class="hero__tags">
 					<span class="chip mono">// back-end</span>
 					<span class="chip mono">// web</span>
 					<span class="chip mono">// data</span>
+					<span class="chip mono">// LLM workflows</span>
 					<span class="chip chip--open mono">// open to roles</span>
 				</div>
 			</header>
@@ -125,6 +133,12 @@
 									<li>
 										Engineered <strong>CSV processing pipelines</strong> with Pandas to
 										transform and validate large enterprise datasets reliably.
+									</li>
+									<li>
+										Used <strong>LLM-assisted workflows</strong> to accelerate delivery in
+										an enterprise codebase — generating test coverage, drafting refactors
+										and reasoning through unfamiliar legacy code — with every change
+										human-reviewed before merge.
 									</li>
 									<li>
 										Worked within an enterprise engineering team, following
@@ -161,11 +175,60 @@
 						</ol>
 					</section>
 
+					<!-- AI & LLM Practice -->
+					<section class="block reveal" id="ai-practice">
+						<h2 class="block__title"><span class="block__num">02</span> AI &amp; LLM Practice</h2>
+
+						<ul class="practice">
+							<li>
+								<strong>Claude Code as a daily driver</strong> — agentic coding
+								workflows end to end: plan-then-execute on multi-file changes,
+								tightly scoped diffs, and iterative review loops rather than
+								one-shot generation.
+							</li>
+							<li>
+								<strong>Context engineering</strong> — structuring repos with
+								CLAUDE.md conventions, custom slash commands, subagents and hooks
+								so the agent has the right context and guardrails for each task.
+							</li>
+							<li>
+								<strong>MCP integrations</strong> — connecting agents to real
+								tools and data sources (filesystems, APIs, databases) to move
+								beyond code generation into working systems.
+							</li>
+							<li>
+								<strong>LLM application development</strong> — building on the
+								Anthropic API with tool use, structured JSON output, and
+								retrieval over local datasets.
+							</li>
+							<li>
+								<strong>Evaluation &amp; reliability</strong> — I treat LLM
+								output as something to be tested, not trusted: prompt iteration
+								against concrete cases, regression checks, and clear failure
+								modes.
+							</li>
+						</ul>
+					</section>
+
 					<!-- Projects -->
 					<section class="block reveal" id="projects">
-						<h2 class="block__title"><span class="block__num">02</span> Selected Projects</h2>
+						<h2 class="block__title"><span class="block__num">03</span> Selected Projects</h2>
 
 						<div class="projects">
+							<article class="project">
+								<div class="project__icon mono">&lt;/&gt;</div>
+								<div class="project__body">
+									<h3 class="project__title">Agentic Development Workflows</h3>
+									<p class="project__stack mono">Claude Code · MCP · CLAUDE.md</p>
+									<p class="project__desc">
+										Repos built and maintained with an agent-in-the-loop workflow —
+										project conventions, custom slash commands and MCP tooling, so
+										refactors, tests and features are driven by scoped specs rather
+										than ad-hoc prompting.
+									</p>
+								</div>
+							</article>
+
 							<article class="project">
 								<div class="project__icon mono">&lt;/&gt;</div>
 								<div class="project__body">
@@ -236,6 +299,44 @@
 								<span class="contact__value">Portugal</span>
 							</li>
 						</ul>
+					</section>
+
+					<section class="card reveal" id="ai-stack">
+						<h2 class="card__title">AI &amp; LLM Stack</h2>
+
+						<div class="stack-group">
+							<h3 class="stack-group__title mono">Agentic Coding</h3>
+							<div class="pills">
+								<span class="pill pill--accent">Claude Code</span>
+								<span class="pill pill--accent">Agentic Workflows</span>
+								<span class="pill pill--accent">MCP</span>
+								<span class="pill pill--accent">CLAUDE.md</span>
+								<span class="pill pill--accent">Subagents</span>
+								<span class="pill pill--accent">Hooks</span>
+							</div>
+						</div>
+
+						<div class="stack-group">
+							<h3 class="stack-group__title mono">LLM Engineering</h3>
+							<div class="pills">
+								<span class="pill">Prompt Engineering</span>
+								<span class="pill">Anthropic API</span>
+								<span class="pill">Tool Use</span>
+								<span class="pill">RAG</span>
+								<span class="pill">Structured Output</span>
+								<span class="pill">Evals</span>
+							</div>
+						</div>
+
+						<div class="stack-group">
+							<h3 class="stack-group__title mono">AI-Assisted SDLC</h3>
+							<div class="pills">
+								<span class="pill">Spec-Driven Dev</span>
+								<span class="pill">AI Code Review</span>
+								<span class="pill">Test Generation</span>
+								<span class="pill">Context Engineering</span>
+							</div>
+						</div>
 					</section>
 
 					<section class="card reveal" id="stack">
@@ -321,7 +422,7 @@
 			</div>
 
 			<footer class="footer">
-				<p class="mono">// open to software engineer roles · back-end · web · data</p>
+				<p class="mono">// open to software engineer roles · back-end · web · data · LLM workflows</p>
 				<p class="footer__copy">&copy; <span id="year"></span> Tiago Calado</p>
 			</footer>
 		</div>
