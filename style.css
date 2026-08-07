@@ -170,6 +170,18 @@ a {
 	position: relative;
 }
 
+/* Accent-filled variant — used for the persistent contact affordance */
+.btn--accent {
+	color: var(--accent);
+	background: var(--accent-soft);
+	border-color: var(--accent-ring);
+	font-weight: 600;
+}
+
+.btn--accent:hover {
+	border-color: var(--accent);
+}
+
 /* Theme icon crossfade */
 .icon-sun,
 .icon-moon {
@@ -264,6 +276,40 @@ a {
 	color: var(--accent);
 	border-color: var(--accent-ring);
 	background: var(--accent-soft);
+}
+
+/* ---------- EU citizenship badge ---------- */
+.hero__badge {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	max-width: 62ch;
+	margin: 24px 0 0;
+	padding: 13px 16px;
+	font-size: 0.92rem;
+	line-height: 1.55;
+	color: var(--text-soft);
+	background: var(--accent-soft);
+	border: 1px solid var(--accent-ring);
+	border-left: 3px solid var(--accent);
+	border-radius: var(--radius-sm);
+}
+
+.hero__badge strong {
+	color: var(--accent);
+	font-weight: 600;
+}
+
+.hero__badge-tag {
+	flex: none;
+	font-size: 0.7rem;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+	color: var(--accent);
+	border: 1px solid var(--accent-ring);
+	border-radius: 6px;
+	padding: 1px 7px;
+	margin-top: 2px;
 }
 
 /* ---------- Layout ---------- */
@@ -497,6 +543,8 @@ a {
 	border-radius: var(--radius);
 	padding: 22px;
 	box-shadow: var(--shadow-md);
+	/* Clears the sticky topbar when jumped to via an in-page link */
+	scroll-margin-top: 90px;
 }
 
 .card__title {
@@ -640,6 +688,23 @@ a.contact__value:hover { color: var(--accent); }
 
 .footer .mono { color: var(--accent); opacity: 0.85; }
 
+.footer__links {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	margin: 0;
+	color: var(--text-soft);
+}
+
+.footer__links a {
+	transition: color 0.2s ease;
+}
+
+.footer__links a:hover { color: var(--accent); }
+
+.footer__sep { color: var(--text-mute); }
+
 /* ---------- Scroll reveal ---------- */
 .reveal {
 	opacity: 0;
@@ -694,6 +759,7 @@ body::before {
 .hero--intro > *:nth-child(3) { animation-delay: 0.24s; }
 .hero--intro > *:nth-child(4) { animation-delay: 0.33s; }
 .hero--intro > *:nth-child(5) { animation-delay: 0.42s; }
+.hero--intro > *:nth-child(6) { animation-delay: 0.51s; }
 
 @keyframes heroIn {
 	from { opacity: 0; transform: translateY(16px); }
@@ -774,6 +840,10 @@ body::before {
 	.projects { grid-template-columns: 1fr; }
 	.hero { padding: 24px 0 34px; }
 	.footer { flex-direction: column; align-items: flex-start; }
+
+	/* Keep the contact affordance, drop its label to save room */
+	.topbar__contact span { display: none; }
+	.topbar__contact { padding: 9px; width: 40px; height: 40px; justify-content: center; }
 }
 
 /* ---------- Motion / print ---------- */
@@ -788,6 +858,7 @@ body::before {
 
 @media print {
 	.topbar, .hero__tags, .more-link { display: none; }
+	.hero__badge { background: none; }
 	body { background: #fff; }
 	.reveal { opacity: 1; transform: none; }
 	.card, .project { box-shadow: none; }
