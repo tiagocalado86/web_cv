@@ -15,11 +15,14 @@
 
 	--text: #101828;
 	--text-soft: #475467;
-	--text-mute: #98a2b3;
+	/* Darkened from #98a2b3: at these small sizes that was 2.4:1, well under AA */
+	--text-mute: #667085;
 
-	--accent: #2563eb;
-	--accent-soft: rgba(37, 99, 235, 0.1);
-	--accent-ring: rgba(37, 99, 235, 0.28);
+	/* Deepened one step from #2563eb so accent text stays >=4.5:1 even when it
+	   sits on an accent-soft tint (chips, pills, the badge and the AI panel) */
+	--accent: #1d4ed8;
+	--accent-soft: rgba(29, 78, 216, 0.1);
+	--accent-ring: rgba(29, 78, 216, 0.28);
 
 	--shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.04);
 	--shadow-md: 0 14px 34px rgba(8, 30, 52, 0.06);
@@ -48,7 +51,8 @@
 
 	--text: #f1f5f9;
 	--text-soft: #b6c2d4;
-	--text-mute: #6b7688;
+	/* Lightened from #6b7688: that was 3.9:1 on the card surface, under AA */
+	--text-mute: #8794a6;
 
 	--accent: #60a5fa;
 	--accent-soft: rgba(96, 165, 250, 0.14);
@@ -409,6 +413,15 @@ a {
 	font-size: 0.95rem;
 }
 
+.timeline__org a {
+	text-decoration: underline;
+	text-decoration-color: var(--accent-ring);
+	text-underline-offset: 3px;
+	transition: text-decoration-color 0.2s ease;
+}
+
+.timeline__org a:hover { text-decoration-color: var(--accent); }
+
 .bullets {
 	margin: 14px 0 0;
 	padding: 0;
@@ -434,6 +447,15 @@ a {
 .bullets strong {
 	color: var(--text);
 	font-weight: 600;
+}
+
+/* ---------- Highlighted panel (AI-Assisted Engineering) ---------- */
+.panel {
+	background: var(--accent-soft);
+	border: 1px solid var(--accent-ring);
+	border-left: 3px solid var(--accent);
+	border-radius: var(--radius);
+	padding: 24px 26px;
 }
 
 /* ---------- Practice list (AI & LLM) ---------- */
@@ -509,10 +531,37 @@ a {
 	color: var(--text-mute);
 }
 
+.project__title-note {
+	font-weight: 400;
+	color: var(--text-mute);
+}
+
 .project__desc {
 	margin: 10px 0 0;
 	font-size: 0.92rem;
 	color: var(--text-soft);
+}
+
+/* Outbound cue on the cards that link to a live site */
+.project__link {
+	display: inline-block;
+	margin-top: 12px;
+	font-size: 0.78rem;
+	color: var(--accent);
+}
+
+a.project:hover .project__link {
+	text-decoration: underline;
+	text-decoration-color: var(--accent-ring);
+	text-underline-offset: 3px;
+}
+
+/* Marks a card that deliberately has nowhere to click through to */
+.project__note {
+	display: inline-block;
+	margin-top: 12px;
+	font-size: 0.78rem;
+	color: var(--text-mute);
 }
 
 .more-link {
@@ -838,6 +887,7 @@ body::before {
 	.wrap { padding: 16px 16px 48px; }
 	.topbar { padding: 12px 16px; }
 	.projects { grid-template-columns: 1fr; }
+	.panel { padding: 18px 16px; }
 	.hero { padding: 24px 0 34px; }
 	.footer { flex-direction: column; align-items: flex-start; }
 
@@ -857,9 +907,125 @@ body::before {
 }
 
 @media print {
-	.topbar, .hero__tags, .more-link { display: none; }
-	.hero__badge { background: none; }
-	body { background: #fff; }
-	.reveal { opacity: 1; transform: none; }
+	@page {
+		size: A4 portrait;
+		margin: 14mm 13mm;
+	}
+
+	/* Force the light palette regardless of the on-screen theme */
+	:root,
+	:root[data-theme="dark"] {
+		--bg: #fff;
+		--surface: #fff;
+		--surface-2: #fff;
+		--border: #d7dce5;
+		--border-strong: #b9c1cf;
+		--text: #000;
+		--text-soft: #24303f;
+		--text-mute: #55617a;
+		--accent: #1a4fc4;
+		--accent-soft: transparent;
+		--accent-ring: #9db4e6;
+		--shadow-sm: none;
+		--shadow-md: none;
+		--shadow-lg: none;
+	}
+
+	/* Chrome/Safari drop backgrounds by default; keep our borders honest */
+	* { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+	body {
+		background: #fff;
+		background-image: none;
+		font-size: 10.5pt;
+		line-height: 1.45;
+	}
+
+	body::before { display: none; }
+
+	/* Interactive chrome has no meaning on paper */
+	.topbar,
+	.scroll-progress,
+	.hero__tags,
+	.more-link,
+	.project__link,
+	.project__note,
+	.footer__links {
+		display: none;
+	}
+
+	.wrap { max-width: none; padding: 0; }
+
+	/* Sidebar below the main column reads better than a cramped two-up */
+	.layout { display: block; }
+	.sidebar {
+		position: static;
+		display: block;
+		margin: 0;
+		columns: 2;
+		column-gap: 18px;
+	}
+
+	.card {
+		break-inside: avoid;
+		-webkit-column-break-inside: avoid;
+		border: 1px solid var(--border);
+		padding: 12px 14px;
+		margin-bottom: 12px;
+	}
+
+	.hero {
+		padding: 0 0 16px;
+		margin-bottom: 18px;
+	}
+
+	.hero--intro > * { opacity: 1 !important; animation: none !important; }
+	.hero__name { font-size: 26pt; }
+	.hero__role { font-size: 11pt; }
+	.hero__role::after { display: none; } /* the blinking caret */
+	.hero__bio { font-size: 10pt; max-width: none; }
+
+	.hero__badge,
+	.panel {
+		background: none;
+		border: 1px solid var(--border);
+		border-left: 2.5pt solid var(--accent);
+	}
+
+	.reveal,
+	.reveal .timeline__item,
+	.reveal .project {
+		opacity: 1 !important;
+		transform: none !important;
+	}
+
+	.block { margin-bottom: 22px; break-inside: avoid-page; }
+	.block__title { font-size: 13pt; margin-bottom: 14px; padding-bottom: 8px; }
+
+	.timeline__item {
+		break-inside: avoid;
+		padding-bottom: 16px;
+	}
+	.timeline__item::after { animation: none; box-shadow: none; }
+
+	.projects { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+	.project {
+		break-inside: avoid;
+		border: 1px solid var(--border);
+		padding: 12px 14px;
+	}
+
 	.card, .project { box-shadow: none; }
+
+	/* A printed page loses every href — spell the important ones out */
+	.contact__value[href^="http"]::after,
+	.contact__value[href^="mailto"]::after {
+		content: "";
+	}
+	.timeline__org a::after {
+		content: " (" attr(href) ")";
+		font-size: 8.5pt;
+		color: var(--text-mute);
+	}
+	a { text-decoration: none; }
 }

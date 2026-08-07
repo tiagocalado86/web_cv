@@ -9,14 +9,64 @@
 			content="Tiago Calado — Software Engineer. Back-end, web, data and LLM workflows. Two industry internships including back-end development at IBM / Softinsa."
 		/>
 		<meta name="author" content="Tiago Calado" />
+		<link rel="canonical" href="https://tiagocalado86.github.io/web_cv/" />
 
 		<!-- Open Graph -->
 		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Tiago Calado" />
+		<meta property="og:url" content="https://tiagocalado86.github.io/web_cv/" />
+		<meta property="og:locale" content="en_GB" />
 		<meta property="og:title" content="Tiago Calado — Software Engineer" />
 		<meta
 			property="og:description"
-			content="Back-end · web · data · LLM workflows. Building clean, maintainable services with an agent-in-the-loop workflow."
+			content="Back-end · web · data · agentic workflows. EU citizen, open to relocation to Germany and Switzerland."
 		/>
+		<!-- Absolute URL: scrapers do not resolve relative paths -->
+		<meta property="og:image" content="https://tiagocalado86.github.io/web_cv/assets/og-cover.png" />
+		<meta property="og:image:type" content="image/png" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta
+			property="og:image:alt"
+			content="Tiago Calado — Software Engineer · Agentic Development"
+		/>
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Tiago Calado — Software Engineer" />
+		<meta
+			name="twitter:description"
+			content="Back-end · web · data · agentic workflows. EU citizen, open to relocation to Germany and Switzerland."
+		/>
+		<meta name="twitter:image" content="https://tiagocalado86.github.io/web_cv/assets/og-cover.png" />
+
+		<!-- Structured data -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"name": "Tiago Calado",
+				"jobTitle": "Software Engineer",
+				"email": "mailto:ttcalado@gmail.com",
+				"url": "https://tiagocalado86.github.io/web_cv/",
+				"image": "https://tiagocalado86.github.io/web_cv/assets/og-cover.png",
+				"sameAs": [
+					"https://github.com/tiagocalado86",
+					"https://www.linkedin.com/in/tiago-calado-7545b1268/"
+				],
+				"alumniOf": {
+					"@type": "CollegeOrUniversity",
+					"name": "Instituto Politécnico de Castelo Branco"
+				},
+				"knowsLanguage": [
+					{ "@type": "Language", "name": "Portuguese", "alternateName": "pt" },
+					{ "@type": "Language", "name": "English", "alternateName": "en" }
+				],
+				"address": {
+					"@type": "PostalAddress",
+					"addressCountry": "PT"
+				}
+			}
+		</script>
 
 		<!-- Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,6 +77,20 @@
 		/>
 
 		<link rel="stylesheet" href="style.css" />
+
+		<!-- Scroll-reveal starts at opacity 0 and is switched on by script.js.
+		     Without JS there is nothing to switch it on, so undo it here. -->
+		<noscript>
+			<style>
+				.reveal,
+				.reveal .timeline__item,
+				.reveal .project {
+					opacity: 1 !important;
+					transform: none !important;
+				}
+				.scroll-progress { display: none; }
+			</style>
+		</noscript>
 
 		<!-- Set theme before first paint to avoid a flash -->
 		<script>
@@ -109,21 +173,20 @@
 			<header class="hero hero--intro">
 				<p class="hero__eyebrow"><span class="mono">// hello, I'm</span></p>
 				<h1 class="hero__name">Tiago Calado</h1>
-				<p class="hero__role"><span class="mono">Software Engineer</span></p>
+				<p class="hero__role"><span class="mono">Software Engineer · Agentic Development</span></p>
 				<p class="hero__bio">
-					Software engineer with two industry internships, including back-end
-					development at <strong>IBM&nbsp;/&nbsp;Softinsa</strong>. I build clean,
-					maintainable services and data pipelines, and work comfortably across
-					languages and frameworks — from Python and SQL to the web stack.
-					<strong>LLM-driven workflows are central to how I work</strong>: I use
-					<strong>Claude&nbsp;Code</strong> daily as an agentic development
-					environment — scoping specs, orchestrating multi-step refactors,
-					generating and reviewing tests, and wiring up custom tooling and MCP
-					servers so the model has real context on the codebase. I care about the
-					discipline as much as the speed: reviewable diffs, tight context, and
-					code I'd be happy to own. I like turning ambiguous problems into
-					reliable solutions and enjoy owning a feature end to end, from data
-					layer to interface.
+					Software engineer with two industry internships — including back-end
+					development at <strong>IBM&nbsp;/&nbsp;Softinsa</strong> — who also builds
+					and runs a small web services business with paying clients. I work across
+					the stack and am strongest on the back end: maintainable Python services,
+					REST APIs and data pipelines.
+					<strong>Agentic development is central to how I work</strong>:
+					<strong>Claude&nbsp;Code</strong> is my daily development environment —
+					scoping specs, orchestrating multi-file refactors, generating and
+					reviewing tests, and building custom MCP servers so the model has real
+					context on the codebase. I care about the discipline as much as the
+					speed: tight context, reviewable diffs, and output I treat as something
+					to be verified rather than trusted.
 				</p>
 				<div class="hero__tags">
 					<span class="chip mono">// back-end</span>
@@ -151,10 +214,43 @@
 						<ol class="timeline">
 							<li class="timeline__item">
 								<div class="timeline__head">
+									<h3 class="timeline__role">Founder &amp; Developer</h3>
+									<span class="timeline__date mono">2025 — Present</span>
+								</div>
+								<p class="timeline__org">
+									terraroot ·
+									<a href="https://www.terraroot.pt" target="_blank" rel="noopener">terraroot.pt</a>
+								</p>
+								<ul class="bullets">
+									<li>
+										Founded and run a <strong>web services business</strong>: I build, host
+										and maintain client websites end to end, from first scoping call
+										through deployment to ongoing monthly maintenance.
+									</li>
+									<li>
+										Own the <strong>full delivery lifecycle</strong> under recurring
+										retainer agreements — hand-built sites, hosting and domains, security
+										updates, content changes and monthly reporting.
+									</li>
+									<li>
+										Ship <strong>production sites meeting real business requirements</strong>:
+										mobile-first responsive layouts, SEO structure, GDPR-compliant contact
+										handling and accessibility basics.
+									</li>
+									<li>
+										Translate non-technical client goals into
+										<strong>concrete technical scope</strong>, and support the work after
+										launch rather than handing it off.
+									</li>
+								</ul>
+							</li>
+
+							<li class="timeline__item">
+								<div class="timeline__head">
 									<h3 class="timeline__role">Software Engineering Intern · Back-End</h3>
 									<span class="timeline__date mono">Feb 2024 — May 2024</span>
 								</div>
-								<p class="timeline__org">IBM — Softinsa</p>
+								<p class="timeline__org">IBM — Softinsa · Tomar</p>
 								<ul class="bullets">
 									<li>
 										Built a <strong>data-filtration service for SAP</strong> in Python
@@ -162,7 +258,9 @@
 									</li>
 									<li>
 										Engineered <strong>CSV processing pipelines</strong> with Pandas to
-										transform and validate large enterprise datasets reliably.
+										transform and validate enterprise datasets, handling
+										<strong>malformed input and schema drift</strong> rather than assuming
+										clean data.
 									</li>
 									<li>
 										Used <strong>LLM-assisted workflows</strong> to accelerate delivery in
@@ -171,12 +269,9 @@
 										human-reviewed before merge.
 									</li>
 									<li>
-										Worked within an enterprise engineering team, following
-										<strong>collaborative development practices</strong> and code review.
-									</li>
-									<li>
-										Delivered a maintainable, production-oriented back-end in a
-										corporate environment.
+										Delivered <strong>production-oriented back-end code</strong> inside an
+										enterprise engineering team, working to their
+										<strong>code review and branching conventions</strong>.
 									</li>
 								</ul>
 							</li>
@@ -186,7 +281,7 @@
 									<h3 class="timeline__role">Web Development Intern · Back-End</h3>
 									<span class="timeline__date mono">Jun 2023 — Aug 2023</span>
 								</div>
-								<p class="timeline__org">Web Development Internship</p>
+								<p class="timeline__org">NOOP · Portugal</p>
 								<ul class="bullets">
 									<li>
 										Designed and implemented <strong>back-end web services</strong>
@@ -207,37 +302,39 @@
 
 					<!-- AI & LLM Practice -->
 					<section class="block reveal" id="ai-practice">
-						<h2 class="block__title"><span class="block__num">02</span> AI &amp; LLM Practice</h2>
+						<h2 class="block__title"><span class="block__num">02</span> AI-Assisted Engineering</h2>
 
-						<ul class="practice">
-							<li>
-								<strong>Claude Code as a daily driver</strong> — agentic coding
-								workflows end to end: plan-then-execute on multi-file changes,
-								tightly scoped diffs, and iterative review loops rather than
-								one-shot generation.
-							</li>
-							<li>
-								<strong>Context engineering</strong> — structuring repos with
-								CLAUDE.md conventions, custom slash commands, subagents and hooks
-								so the agent has the right context and guardrails for each task.
-							</li>
-							<li>
-								<strong>MCP integrations</strong> — connecting agents to real
-								tools and data sources (filesystems, APIs, databases) to move
-								beyond code generation into working systems.
-							</li>
-							<li>
-								<strong>LLM application development</strong> — building on the
-								Anthropic API with tool use, structured JSON output, and
-								retrieval over local datasets.
-							</li>
-							<li>
-								<strong>Evaluation &amp; reliability</strong> — I treat LLM
-								output as something to be tested, not trusted: prompt iteration
-								against concrete cases, regression checks, and clear failure
-								modes.
-							</li>
-						</ul>
+						<div class="panel">
+							<ul class="practice">
+								<li>
+									<strong>Claude Code as a daily driver</strong> — agentic coding
+									workflows end to end: plan-then-execute on multi-file changes,
+									tightly scoped diffs, and iterative review loops rather than
+									one-shot generation.
+								</li>
+								<li>
+									<strong>Context engineering</strong> — structuring repos with
+									CLAUDE.md conventions, custom slash commands, subagents and hooks
+									so the agent has the right context and guardrails for each task.
+								</li>
+								<li>
+									<strong>Building custom MCP servers</strong> — exposing real
+									tools and data sources (filesystems, APIs, databases) to the
+									agent, moving beyond code generation into working systems.
+								</li>
+								<li>
+									<strong>LLM application development</strong> — building on the
+									Anthropic API with tool use, structured JSON output, and
+									retrieval over local datasets.
+								</li>
+								<li>
+									<strong>Evaluation &amp; reliability</strong> — I treat LLM
+									output as something to be tested, not trusted: prompt iteration
+									against concrete cases, regression checks, and clear failure
+									modes.
+								</li>
+							</ul>
+						</div>
 					</section>
 
 					<!-- Projects -->
@@ -245,66 +342,72 @@
 						<h2 class="block__title"><span class="block__num">03</span> Selected Projects</h2>
 
 						<div class="projects">
+							<a
+								class="project"
+								href="https://www.codigoluminoso.com"
+								target="_blank"
+								rel="noopener"
+							>
+								<div class="project__icon mono">&lt;/&gt;</div>
+								<div class="project__body">
+									<h3 class="project__title">Código Luminoso</h3>
+									<p class="project__stack mono">HTML · CSS · JavaScript · SEO · GDPR</p>
+									<p class="project__desc">
+										Live website delivered for an accounting firm — built to make
+										technical services legible to non-specialists and turn visits into
+										proposal requests. Structured service pages, an FAQ answering the
+										questions clients actually ask, GDPR-compliant contact handling and
+										full legal pages. Hosted and maintained by me since launch.
+									</p>
+									<span class="project__link mono">codigoluminoso.com&nbsp;↗</span>
+								</div>
+							</a>
+
 							<article class="project">
 								<div class="project__icon mono">&lt;/&gt;</div>
 								<div class="project__body">
-									<h3 class="project__title">Agentic Development Workflows</h3>
-									<p class="project__stack mono">Claude Code · MCP · CLAUDE.md</p>
+									<h3 class="project__title">Agentic Development Tooling</h3>
+									<p class="project__stack mono">Claude Code · MCP · CLAUDE.md · Python</p>
 									<p class="project__desc">
 										Repos built and maintained with an agent-in-the-loop workflow —
-										project conventions, custom slash commands and MCP tooling, so
-										refactors, tests and features are driven by scoped specs rather
-										than ad-hoc prompting.
+										project conventions, custom slash commands and MCP servers, so
+										refactors, tests and features are driven by scoped specs rather than
+										ad-hoc prompting.
 									</p>
 								</div>
 							</article>
 
-							<article class="project">
+							<a
+								class="project"
+								href="https://www.terraroot.pt"
+								target="_blank"
+								rel="noopener"
+							>
 								<div class="project__icon mono">&lt;/&gt;</div>
 								<div class="project__body">
-									<h3 class="project__title">Full Web Application</h3>
-									<p class="project__stack mono">Python · REST API · Front-End</p>
+									<h3 class="project__title">terraroot</h3>
+									<p class="project__stack mono">HTML · CSS · JavaScript · SEO</p>
 									<p class="project__desc">
-										End-to-end application pairing a back-end REST API with a web
-										front-end — built to practice clean architecture and end-to-end
-										ownership.
+										The site for my own web services business: service pages, a
+										documented working method, monthly plans and a lead-capture flow.
+										Designed, built and maintained by me.
 									</p>
+									<span class="project__link mono">terraroot.pt&nbsp;↗</span>
 								</div>
-							</article>
+							</a>
 
 							<article class="project">
 								<div class="project__icon mono">&lt;/&gt;</div>
 								<div class="project__body">
-									<h3 class="project__title">API &amp; Data Services</h3>
-									<p class="project__stack mono">Python · Flask · FastAPI · Pandas</p>
+									<h3 class="project__title">SaaS Prototype <span class="project__title-note">(discontinued)</span></h3>
+									<p class="project__stack mono">Python · REST API integration</p>
 									<p class="project__desc">
-										Back-end services and data-processing prototypes exploring API
-										design, request handling, and dataset transformation.
+										Built a working prototype before establishing that the third-party
+										API it depended on could not support a core requirement. Stopped and
+										documented the constraint rather than building around a foundation
+										that would not hold.
 									</p>
-								</div>
-							</article>
-
-							<article class="project">
-								<div class="project__icon mono">&lt;/&gt;</div>
-								<div class="project__body">
-									<h3 class="project__title">Containerised Deployments</h3>
-									<p class="project__stack mono">Docker</p>
-									<p class="project__desc">
-										Packaging applications into reproducible Docker containers for
-										consistent local-to-deploy workflows.
-									</p>
-								</div>
-							</article>
-
-							<article class="project">
-								<div class="project__icon mono">&lt;/&gt;</div>
-								<div class="project__body">
-									<h3 class="project__title">Creative &amp; Media Tooling</h3>
-									<p class="project__stack mono">3D Modeling · Photoshop · Premiere</p>
-									<p class="project__desc">
-										Side work in 3D modeling and media editing — a visual eye that
-										carries into thoughtful, detail-driven UI.
-									</p>
+									<span class="project__note mono">private repo</span>
 								</div>
 							</article>
 						</div>
@@ -349,6 +452,7 @@
 								<span class="pill pill--accent">Agentic Workflows</span>
 								<span class="pill pill--accent">MCP</span>
 								<span class="pill pill--accent">CLAUDE.md</span>
+								<span class="pill pill--accent">Slash Commands</span>
 								<span class="pill pill--accent">Subagents</span>
 								<span class="pill pill--accent">Hooks</span>
 							</div>
@@ -408,6 +512,9 @@
 								<span class="pill">HTML</span>
 								<span class="pill">CSS</span>
 								<span class="pill">React</span>
+								<span class="pill">Responsive</span>
+								<span class="pill">SEO</span>
+								<span class="pill">GDPR</span>
 							</div>
 						</div>
 
@@ -415,6 +522,8 @@
 							<h3 class="stack-group__title mono">Data &amp; Tooling</h3>
 							<div class="pills">
 								<span class="pill">Pandas</span>
+								<span class="pill">MySQL</span>
+								<span class="pill">Unit Testing</span>
 								<span class="pill">Docker</span>
 								<span class="pill">Git</span>
 								<span class="pill">JetBrains IDEs</span>
@@ -431,7 +540,7 @@
 							</li>
 							<li>
 								<span>English</span>
-								<span class="langs__level mono">Professional</span>
+								<span class="langs__level mono">Fluent · C1</span>
 							</li>
 						</ul>
 					</section>
@@ -442,7 +551,7 @@
 							<li>
 								<h3 class="edu__title">BSc Software Engineering</h3>
 								<p class="edu__org">IP de Castelo Branco</p>
-								<p class="edu__meta mono">In progress</p>
+								<p class="edu__meta mono">Expected 06/2027</p>
 							</li>
 							<li>
 								<h3 class="edu__title">CTeSP — Web &amp; Multimedia Dev</h3>
@@ -460,13 +569,14 @@
 			</div>
 
 			<footer class="footer">
-				<p class="mono">// open to software engineer roles · back-end · web · data · LLM workflows</p>
+				<p class="mono">// back-end · web · data · agentic workflows</p>
 				<p class="footer__links">
 					<a href="mailto:ttcalado@gmail.com">ttcalado@gmail.com</a>
 					<span class="footer__sep" aria-hidden="true">·</span>
 					<a href="https://www.linkedin.com/in/tiago-calado-7545b1268/" target="_blank" rel="noopener">LinkedIn</a>
 				</p>
-				<p class="footer__copy">&copy; <span id="year"></span> Tiago Calado</p>
+				<!-- Static fallback so the year still renders without JS; script.js refreshes it. -->
+				<p class="footer__copy">&copy; <span id="year">2026</span> Tiago Calado</p>
 			</footer>
 		</div>
 
